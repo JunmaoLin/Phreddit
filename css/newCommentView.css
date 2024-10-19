@@ -1,0 +1,94 @@
+#comment_page{
+    display: none; /* changed to none later */
+    padding: 16px;
+    width: 100%;
+}
+#reply_page{
+    display: none;
+    padding: 16px;
+    background-color: white;
+    width: 100vw;
+}
+
+#comment_page_content{
+    display: flex;
+    flex-direction: column;
+}
+
+#comment_text{
+    padding: 16px;
+    resize: none;
+    height: 100px;
+}
+#reply_page_content{
+    display: flex;
+    flex-direction: column;
+}
+
+#reply_text{
+    padding: 16px;
+    resize: none;
+    height: 100px;
+}
+
+
+#submitCommentFormButton{
+    background-color: rgb(11, 69, 156);
+    color: white;
+    border-radius: 24px;
+    border: none;
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+#submitCommentFormButton:hover{
+    background-color: rgb(10, 47, 108);
+    cursor: pointer;
+}
+#closeCommentFormButton{
+    background-color: rgb(229, 235, 238);
+    color: black;
+    border-radius: 24px;
+    border: none;
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    margin-top: 10px;
+}
+#closeCommentFormButton:hover{
+    background-color: rgb(219, 228, 233);
+    cursor: pointer;
+}
+
+
+#submitReplyFormButton{
+    background-color: rgb(11, 69, 156);
+    color: white;
+    border-radius: 24px;
+    border: none;
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+#submitReplyFormButton:hover{
+    background-color: rgb(10, 47, 108);
+    cursor: pointer;
+}
+#closeReplyFormButton{
+    background-color: rgb(229, 235, 238);
+    color: black;
+    border-radius: 24px;
+    border: none;
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    margin-top: 10px;
+}
+#closeReplyFormButton:hover{
+    background-color: rgb(219, 228, 233);
+    cursor: pointer;
+}

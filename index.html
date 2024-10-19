@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/createPost.css">
+  <link rel="stylesheet" href="css/newCommentView.css">
+  <script type="module" src="src/index.js"></script>
+</head>
+<body>
+
+  <div id="banner" >
+    <div id="logo_section">
+      <a id="logo_name_a_tag" class="goToHomePage"><h3 id="logo_name">phreddit</h3></a>
+    </div>
+
+    <div id="search_bar_section">
+      <input id="search_bar" type="text" placeholder="Search Phreddit...">
+    </div>
+
+    <div id="create_post_section">
+      <button id="create_post_button" type="button">Create Post</button>
+    </div>
+  </div>
+
+  <div id="nav_and_home_div">
+    <div id="nav_bar">
+      <div id="home_div" class="nav_bar_element">
+        <a id="home_link" class="goToHomePage">Home</a>
+      </div>
+  
+      <div id="communities_header" class="nav_bar_element">
+        <header>Communities</header>
+      </div>
+  
+      <div id="create_community_div" class="nav_bar_element">
+        <button id="create_community_button" type="button">Create Community</button>
+      </div>
+
+      <div id="listsOfCommunities">
+        <!-- use JS to add the list of communities in - Junmao -->
+      </div>
+    </div>
+
+    <!-- Create Post Form -->
+    <div id="new_post_page_view" class="main_cont_divs">
+
+      <div id="create_post_div">
+        <h2>Create Post</h2>
+      </div>
+
+      <div id="create_post_drop_down_div" class="post_divs">
+        <label for="Community_Selection"><b>Community Selection<span class="required-indicator">*</span></b></label>
+        <select id="community_dropdown" class="select_dropdown" required>
+          <option value="" disabled selected>Select Community</option>
+          <!-- use JS to add the list of communities in - Junmao -->
+        </select>
+        <div id="community_dropdown_error" class="error-message"></div>
+      </div>
+      
+      <!-- post title textbox -->
+      <div id="post_title_div" class="post_divs">
+        <label for="title"><b>Post Title<span class="required-indicator">*</span></b></label>
+        <input type="text" maxlength="100" placeholder="Enter Post Title" id="post_title" class="post_input_box" required>
+        <div id="post_title_error" class="error-message"></div>
+      </div>
+
+      <div id="link_flair_selection" class="post_divs">
+        <label for="link_flair_Selection"><b>Link Flair Selection</b></label>
+        <div id="link_flair_dropdown_and_input">
+          <select id="link_flair_dropdown" class="select_dropdown" required></select>
+          <!-- use JS to add the list of link flairs in - Junmao -->
+          </select>
+          <input type="text" maxlength="30" placeholder="Enter New Link Flair" id="link_flair_input" class="post_input_box">
+          <div id="link_flair_input_error" class="error-message"></div>
+        </div>
+      </div>
+
+      <!-- post content textbox -->
+      <div id="post_text_div" class="post_divs">
+        <label for="text"><b>Post Text<span class="required-indicator">*</span></b></label>
+        <textarea placeholder="Enter Post Text" id="post_text" class="post_input_box" required></textarea>
+        <div id="post_text_error" class="error-message"></div>
+      </div>
+
+      <!-- Username textbox -->
+      <div id="post_user_div" class="post_divs">
+        <label for="username"><b>Content Creator Name<span class="required-indicator">*</span></b></label>
+        <input type="text" placeholder="Enter Username" id="content_creator_username" class="post_input_box" required>
+        <div id="content_creator_username_error" class="error-message"></div>
+      </div>
+      
+      <div id="post_button_div">
+        <button type="button" id="submitPostFormButton">Submit Post</button>
+        <button type="button" id="closePostFormButton">Cancel</button>
+      </div>
+    </div>
+    <!-- End of Create Post Form -->
+
+
+    <!-- community form begins - Junmao -->
+    <div id="community_popupForm_div" class="main_cont_divs">
+      <form id="community_form_container">
+        <h2 id="community_form_h_tag">Tell us about your community</h2>
+        <p id="community_form_p_tag">A name and description help people understand what your community is all about</p>
+        
+        <label for="name"><b>Community Name<span class="required-indicator">*</span></b></label>
+        <input type="text" maxlength="100" placeholder="Enter Community Name" id="community_name" class="community_input_box" required>
+        <div id="community_name_error" class="error-message"></div>
+
+        <label for="description"><b>Description<span class="required-indicator">*</span></b></label>
+        <textarea maxlength="500" placeholder="Enter Description" id="community_description" class="community_input_box" required></textarea>
+        <div id="community_description_error" class="error-message"></div>
+
+        <label for="username"><b>Creator Username<span class="required-indicator">*</span></b></label>
+        <input type="text" placeholder="Enter Username" id="creator_username" class="community_input_box" required>
+        <div id="creator_username_error" class="error-message"></div>
+
+        <div id="community_button_div">
+          <button type="button" id="openCommunityFormButton">Engender Community</button>
+          <button type="button" id="closeCommunityFormButton">Cancel</button>
+        </div>
+      </form>
+    </div>
+    <!-- community form  ends-->
+    <!-- FOR #7 MAKE COMMUNITY VIEW PAGE SO THAT THE NEWLY CREATED COMMUNITY CAN SHOW UP WHEN CREATED SUCCESSFULLY - Junmao -->
+  
+    <div id="homePage" class="main_cont_divs">
+      <div id="header">
+      </div>
+      <div id="posts">
+        <img src="images/noResults.svg"/>
+        <div class="post">
+        </div>
+      </div>
+    </div>
+
+    <!-- Create comment Form -->
+    <div id="comment_page"  class="main_cont_divs">
+
+      <div id="comment_page_content">
+        <div id="create_comment_div"></div>
+          <h2>Create New Comment</h2>
+        </div>
+
+        
+        <div id="comment_text_div" class="post_divs">
+          <label for="text"><b>Comment Description<span class="required-indicator">*</span></b></label>
+          <textarea placeholder="Enter A Comment" maxlength="500" id="comment_text" class="post_input_box" required></textarea>
+          <div id="comment_text_error" class="error-message"></div>
+        </div>
+
+       
+        <div id="post_user_div" class="post_divs">
+          <label for="username"><b>Comment Creator Name<span class="required-indicator">*</span></b></label>
+          <input type="text" placeholder="Enter Username" id="comment_creator_username" class="post_input_box" required>
+          <div id="comment_creator_username_error" class="error-message"></div>
+        </div>
+
+        <div id="comment_button_div">
+          <button type="button" id="submitCommentFormButton">Submit Comment</button> 
+          <button type="button" id="closeCommentFormButton">Cancel Submission</button>
+        </div>
+      </div>
+      
+      <!-- Create reply Form -->
+      <div id="reply_page"  class="main_cont_divs">
+        <div id="reply_page_content">
+          <div id="create_comment_div"></div>
+            <h2>Create New Comment</h2>
+          </div>
+          <div id="reply_text_div" class="post_divs">
+            <label for="text"><b>Comment Description<span class="required-indicator">*</span></b></label>
+            <textarea placeholder="Enter A Comment" maxlength="500" id="reply_text" class="post_input_box" required></textarea>
+            <div id="reply_text_error" class="error-message"></div>
+          </div>
+          <div id="post_user_div" class="post_divs">
+            <label for="username"><b>Comment Creator Name<span class="required-indicator">*</span></b></label>
+            <input type="text" placeholder="Enter Username" id="reply_creator_username" class="post_input_box" required>
+            <div id="reply_creator_username_error" class="error-message"></div>
+          </div>
+          <div id="reply_button_div">
+            <button type="button" id="submitReplyFormButton">Submit Comment</button> 
+            <button type="button" id="closeReplyFormButton">Cancel Submission</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="main" class="main"></div>
+</body>
+</html>
